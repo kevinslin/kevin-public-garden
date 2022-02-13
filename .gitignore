@@ -1,0 +1,11 @@
+node_modules
+.dendron.*
+build
+seeds
+.next
+pods/service-connections
+
+
+kevin-blog
+kevin-public
+.next
