@@ -6,8 +6,12 @@ frontend:
         - yarn
     build:
       commands: 
+        - echo "workspace init"
         - npx dendron workspace init
         - npx dendron workspace pull
+        - echo "check"
+        - "echo `pwd`"
+        - "echo `ls`"
         - "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git clean -f && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)"
         - yarn dendron publish export
   artifacts:
@@ -21,7 +25,6 @@ frontend:
       - assets/**/*
       - node_modules/**/*
       - .next/node_modules/**/*
-      - .next/.next/**/*
       - .next/.git/**/*
 
     # - name: Install dependencies
