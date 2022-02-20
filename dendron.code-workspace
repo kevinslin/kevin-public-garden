@@ -1,7 +1,8 @@
 {
   "folders": [
-    {
-      "path": "vault"
+     {
+      "path": "kevin-public/vault",
+      "name": "kevin-public"
     }
   ],
   "settings": {
