@@ -1,39 +1,6 @@
-version: 4
-useFMTitle: true
-useNoteTitleForLink: true
-mermaid: true
-useKatex: true
+version: 5
 dev:
     enablePreviewV2: true
-site:
-    copyAssets: true
-    siteHierarchies:
-        - home
-        - daily
-        - til
-        - blog
-        - r
-        - books
-        - podcasts
-        - proj
-        - tags
-    siteRootDir: docs
-    ga_tracking: G-YS49D5ZK3X
-    usePrettyRefs: true
-    logo: assets/images/bio-photo.jpg
-    title: Kevin's Garden
-    description: Building hierarchal tools of thought @ dendron.so
-    twitter: kevins8
-    author: Kevin S Lin
-    siteUrl: 'https://www.kevinslin.com'
-    usePrettyLinks: true
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - kevin-public
-            - kevin-blog
-    siteLastModified: true
-    gh_edit_branch: main
 commands:
     lookup:
         note:
@@ -51,6 +18,7 @@ commands:
         enableMultiSelect: false
     insertNoteIndex:
         enableMarker: false
+    copyNoteLink: {}
 workspace:
     vaults:
         -
@@ -113,6 +81,7 @@ workspace:
             remote:
                 type: git
                 url: 'https://github.com/kevinslin/kevin-public.git'
+    dendronVersion: 0.83.4
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -120,3 +89,49 @@ preview:
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+publishing:
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enableMermaid: true
+    enablePrettyRefs: true
+    enableKatex: true
+    copyAssets: true
+    ga:
+        tracking: G-YS49D5ZK3X
+    logoPath: assets/images/bio-photo.jpg
+    siteHierarchies:
+        - home
+        - daily
+        - til
+        - blog
+        - r
+        - books
+        - podcasts
+        - proj
+        - tags
+        - seeds
+    enableSiteLastModified: true
+    siteRootDir: docs
+    siteUrl: 'https://www.kevinslin.com'
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - kevin-public
+            - kevin-blog
+    writeStubs: false
+    seo:
+        title: Kevin's Garden
+        description: Building hierarchal tools of thought @ dendron.so
+        author: Kevin S Lin
+        twitter: kevins8
+    github:
+        enableEditLink: true
+        editLinkText: Edit this page on GitHub
+        editBranch: main
+        editViewMode: tree
+    enablePrettyLinks: true
