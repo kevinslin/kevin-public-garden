@@ -103,8 +103,8 @@ publishing:
     logoPath: assets/images/bio-photo.jpg
     siteHierarchies:
         - home
-        - proj
         - blog
+        - proj
         - daily
         - til
         - r
