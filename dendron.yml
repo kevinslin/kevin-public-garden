@@ -103,15 +103,13 @@ publishing:
     logoPath: assets/images/bio-photo.jpg
     siteHierarchies:
         - home
+        - proj
+        - blog
         - daily
         - til
-        - blog
         - r
-        - books
-        - podcasts
-        - proj
+        - ref
         - tags
-        - seeds
     enableSiteLastModified: true
     siteRootDir: docs
     siteUrl: 'https://www.kevinslin.com'
