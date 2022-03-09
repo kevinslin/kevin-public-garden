@@ -108,7 +108,7 @@ publishing:
         - daily
         - til
         - r
-        - ref
+        - proj
         - tags
     enableSiteLastModified: true
     siteRootDir: docs
