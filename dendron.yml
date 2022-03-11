@@ -22,11 +22,15 @@ commands:
 workspace:
     vaults:
         -
-            fsPath: ../kevin-garden/kevin-blog/vault
-            name: kevin-blog
-        -
-            fsPath: ../kevin-garden/kevin-public/vault
+            fsPath: vault
+            workspace: kevin-public
             name: kevin-public
+            sync: sync
+        -
+            fsPath: vault
+            workspace: kevin-blog
+            name: kevin-blog
+            sync: sync
     journal:
         dailyDomain: daily
         name: journal
@@ -68,7 +72,15 @@ workspace:
     enableEditorDecorations: true
     maxPreviewsCached: 10
     maxNoteLength: 204800
-    workspaces: {}
+    workspaces:
+        kevin-blog:
+            remote:
+                type: git
+                url: 'https://github.com/kevinslin/kevin-blog.git'
+        kevin-public:
+            remote:
+                type: git
+                url: 'https://github.com/kevinslin/kevin-public.git'
     dendronVersion: 0.83.4
 preview:
     enableFMTitle: true
@@ -104,6 +116,11 @@ publishing:
     enableFrontmatterTags: true
     enableHashesForFMTags: false
     enableRandomlyColoredTags: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - kevin-public
+            - kevin-blog
     writeStubs: false
     seo:
         title: Kevin's Garden
@@ -116,8 +133,3 @@ publishing:
         editBranch: main
         editViewMode: tree
     enablePrettyLinks: true
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - kevin-blog
-            - kevin-public
