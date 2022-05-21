@@ -1,0 +1,9 @@
+workspace:
+  vaults:
+        -
+            fsPath: highlights
+            remote:
+                type: git
+                url: git@github.com:kevinslin/vault-highlights.git
+            selfContained: true
+            name: highlights

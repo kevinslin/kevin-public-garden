@@ -6,3 +6,7 @@ seeds
 pods/service-connections
 kevin-blog
 kevin-public
+
+.backup
+highlights
+dendronrc.yml
