@@ -12,7 +12,7 @@ frontend:
         - ssh-add -l
           #- echo 'add github to known host'
           #- 'ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts'
-        - echo "ls -a ~/.ssh"
+        - mkdir ~/.ssh
         - echo 'disable strict host key checking'
         - touch ~/.ssh/config
         - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
