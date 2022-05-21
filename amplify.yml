@@ -12,8 +12,8 @@ frontend:
         - ssh-add -l
         - echo "workspace init"
         - cp dendronrc.publish.yml dendronrc.yml
-        - npx dendron workspace init
-        - npx dendron workspace pull
+        - GIT_SSH_COMMAND="ssh" npx dendron workspace init
+        - GIT_SSH_COMMAND="ssh" npx dendron workspace pull
         - "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git clean -f && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)"
         - yarn dendron publish export
   artifacts:
