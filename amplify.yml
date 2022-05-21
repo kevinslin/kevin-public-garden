@@ -10,13 +10,16 @@ frontend:
         - eval "$(ssh-agent -s)"
         - ssh-add <(echo "$DEPLOY_KEY" | base64 -d)
         - ssh-add -l
-        - echo 'add github to known host'
-        - 'ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts'
+          #- echo 'add github to known host'
+          #- 'ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts'
+        - echo "ls -a ~/.ssh"
+        - echo 'disable strict host key checking'
+        - touch ~/.ssh/config
+        - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
         - echo "workspace init"
         - cp dendronrc.publish.yml dendronrc.yml
         - GIT_SSH_COMMAND="ssh" npx dendron workspace init
         - GIT_SSH_COMMAND="ssh" npx dendron workspace pull
-          #- 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
         - "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git clean -f && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)"
         - yarn dendron publish export
   artifacts:
