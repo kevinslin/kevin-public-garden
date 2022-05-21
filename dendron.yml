@@ -76,12 +76,13 @@ workspace:
         kevin-blog:
             remote:
                 type: git
-                url: 'https://github.com/kevinslin/kevin-blog.git'
+                url: https://github.com/kevinslin/kevin-blog.git
         kevin-public:
             remote:
                 type: git
-                url: 'https://github.com/kevinslin/kevin-public.git'
+                url: https://github.com/kevinslin/kevin-public.git
     dendronVersion: 0.83.4
+    enableFullHierarchyNoteTitle: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -113,7 +114,7 @@ publishing:
         - tags
     enableSiteLastModified: true
     siteRootDir: docs
-    siteUrl: 'https://www.kevinslin.com'
+    siteUrl: https://www.kevinslin.com
     enableFrontmatterTags: true
     enableHashesForFMTags: false
     enableRandomlyColoredTags: true
