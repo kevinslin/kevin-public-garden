@@ -14,6 +14,7 @@ frontend:
         - cp dendronrc.publish.yml dendronrc.yml
         - GIT_SSH_COMMAND="ssh" npx dendron workspace init
         - GIT_SSH_COMMAND="ssh" npx dendron workspace pull
+        - 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
         - "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git clean -f && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)"
         - yarn dendron publish export
   artifacts:
