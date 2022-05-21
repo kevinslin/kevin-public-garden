@@ -9,6 +9,7 @@ frontend:
         - echo "add deploy key"
         - eval "$(ssh-agent -s)"
         - ssh-add <(echo "$DEPLOY_KEY" | base64 -d)
+        - ssh-add -l
         - echo "workspace init"
         - cp dendronrc.publish.yml dendronrc.yml
         - npx dendron workspace init
