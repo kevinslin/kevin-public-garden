@@ -6,6 +6,9 @@ frontend:
         - yarn
     build:
       commands: 
+        - echo "add deploy key"
+        - eval $(ssh-agent -s)
+        - ssh-add <(echo "$DEPLOY_KEY" | base64 --decode)
         - echo "workspace init"
         - cp dendronrc.publish.yml dendronrc.yml
         - npx dendron workspace init
