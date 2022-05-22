@@ -109,7 +109,7 @@ publishing:
         - proj
         - daily
         - til
-        - r
+        - res
         - proj
         - tags
     enableSiteLastModified: true
