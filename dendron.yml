@@ -112,6 +112,7 @@ publishing:
         - res
         - proj
         - tags
+        - task
     enableSiteLastModified: true
     siteRootDir: docs
     siteUrl: https://www.kevinslin.com
