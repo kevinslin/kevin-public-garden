@@ -25,10 +25,12 @@ workspace:
             fsPath: vault
             workspace: kevin-public
             name: kevin-public
+            siteUrl: https://kevinslin.com
             sync: sync
         -
             fsPath: vault
             workspace: kevin-blog
+            siteUrl: https://kevinslin.com
             name: kevin-blog
             sync: sync
     journal:
