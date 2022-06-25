@@ -108,14 +108,18 @@ publishing:
         - home
         - me
         - blog
-        - proj
         - daily
-        - til
+        - tir
         - res
         - proj
         - tags
         - task
+        - seeds
     enableSiteLastModified: true
+    hierarchy:
+      - proj:
+          customFrontmatter:
+            nav_exclude_children: true
     siteRootDir: docs
     siteUrl: https://www.kevinslin.com
     enableFrontmatterTags: true
