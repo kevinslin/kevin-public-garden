@@ -24,13 +24,11 @@ workspace:
         -
             fsPath: vault
             workspace: kevin-public
-            siteUrl: https://kevinslin.com
             name: kevin-public
             siteUrl: https://kevinslin.com
             sync: sync
         -
             fsPath: vault
-            siteUrl: https://kevinslin.com
             workspace: kevin-blog
             siteUrl: https://kevinslin.com
             name: kevin-blog
