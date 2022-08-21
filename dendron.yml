@@ -110,6 +110,7 @@ publishing:
         - blog
         - daily
         - tir
+        - til
         - res
         - proj
         - tags
