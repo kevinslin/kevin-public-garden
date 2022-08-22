@@ -115,7 +115,6 @@ publishing:
         - proj
         - tags
         - task
-        - seeds
     enableSiteLastModified: true
     hierarchy:
       - proj:
