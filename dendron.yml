@@ -136,6 +136,9 @@ publishing:
         description: Building hierarchal tools of thought @ dendron.so
         author: Kevin S Lin
         twitter: kevins8
+        image:
+          url: https://ik.imagekit.io/fpjzhqpv1/dendron_vector-1200_HWGf65kj5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663095495206
+          alt: "Dendron"
     github:
         enableEditLink: true
         editLinkText: Edit this page on GitHub
