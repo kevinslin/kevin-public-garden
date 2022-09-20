@@ -11,8 +11,6 @@ commands:
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
     randomNote: {}
-    insertNote:
-        initialValue: templates
     insertNoteLink:
         aliasMode: none
         enableMultiSelect: false
@@ -115,6 +113,7 @@ publishing:
         - proj
         - tags
         - task
+        - wip
     enableSiteLastModified: true
     hierarchy:
       - proj:
