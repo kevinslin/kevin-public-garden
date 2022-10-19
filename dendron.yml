@@ -106,6 +106,7 @@ publishing:
         - home
         - me
         - blog
+        - dev
         - daily
         - tir
         - til
