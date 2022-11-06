@@ -67,10 +67,6 @@ workspace:
     maxPreviewsCached: 10
     maxNoteLength: 204800
     workspaces:
-        kevin-blog:
-            remote:
-                type: git
-                url: https://github.com/kevinslin/kevin-blog.git
         kevin-public:
             remote:
                 type: git
@@ -123,7 +119,6 @@ publishing:
         action: useVault
         payload:
             - kevin-public
-            - kevin-blog
     writeStubs: false
     seo:
         title: Kevin's Garden
